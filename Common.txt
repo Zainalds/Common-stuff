@@ -1,0 +1,1 @@
+data-rule-digits="true" ---Allow only numbers in input type text
