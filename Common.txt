@@ -1,1 +1,11 @@
 data-rule-digits="true" ---Allow only numbers in input type text
+
+
+When creating a new table from another table:
+
+SET IDENTITY_INSERT sometableWithIdentity ON
+
+INSERT INTO sometableWithIdentity 
+    (IdentityColumn, col2, col3, ...)
+VALUES 
+    (AnIdentityValue, col2value, col3value, ...)
