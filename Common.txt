@@ -9,3 +9,15 @@ INSERT INTO sometableWithIdentity
     (IdentityColumn, col2, col3, ...)
 VALUES 
     (AnIdentityValue, col2value, col3value, ...)
+
+
+UPDATE USING SELECT
+
+UPDATE CRm..RepTargetsNewBiz 
+SET BranchID = OtherTable.Col1, 
+    Col2 = OtherTable.Col2 
+FROM (
+    SELECT ID, Col1, Col2 
+    FROM other_table) AS OtherTable
+WHERE 
+    OtherTable.ID = YourTable.ID
